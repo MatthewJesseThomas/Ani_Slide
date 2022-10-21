@@ -3,7 +3,7 @@
     --secondaryColor: darkslategray;
     --alternativeColor: rgb(98, 162, 162);
     --myColor: rgba(4, 4, 53, 0.879);
-    --awesomeColor: rgb(128, 180, 248);
+    --theColor: rgb(128, 180, 248);
 }
 *,
 *::after,
@@ -14,7 +14,6 @@
 }
 
 body{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande';
     font-size: 16px;
     line-height: 1.75;
     text-align: center;
@@ -32,7 +31,7 @@ body{
 }
 
 header, footer {
-    background-color: var(--awesomeColor) ;
+    background-color: var(--theColor) ;
     grid-column: 1/ 4;
 }
 
@@ -40,7 +39,7 @@ header, .menu-list , .flex-container {
     display: flex;
 }
 .menu-list {
-    list-style: none; /*can also use list-style-type*/
+    list-style: none; 
     gap: 10px;
 }
 .menu {
@@ -48,21 +47,84 @@ header, .menu-list , .flex-container {
     margin-right: 2rem;
     align-self: center;
 }
+
 .flex-container {
     background-color: var(--alternativeColor);
     grid-column: 1/ 4;
     border: 1rem solid var(--myColor);
     max-width: 100vw;   
 }
+
 .flex-container aside {
     background-color: lightslategray;
     width: 20rem;
 }
+.galad {
+    width: 15rem;
+    height: 30rem;
+}
+
 .flex-container main {
     background-color: rgb(197, 220, 243);
     min-width: 70%;
     margin-left: auto;
     width: 100%;
+}
+
+.container{
+    width: 30vw;
+    height: 90vh;
+    margin: auto;
+    position: relative;
+    perspective: 100%;
+}
+
+.elven {
+    width: 80%;
+}
+/* .front and .back */
+.front, .back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 95%;
+    height: 95%;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;    
+}
+/* Profile */
+.front {
+    z-index: 20;    
+}
+.elven {
+    max-width: 100%;
+    border-radius: 1em;
+    object-fit: cover;
+}
+.back {
+    /* background-color: darkcyan; */
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+.back h2 {
+    font-size: 3em;
+    text-shadow: .2vw .2vw .3vw white;
+}
+.back p {
+    font-size: 1.5rem;
+    background-color: bisque;
+    margin: 2em 0;
+}
+.container:hover .front {
+    transform: rotateX(180deg);
+}
+.galad:hover {
+        transform: rotateY(20deg);
+        transform: rotateX(20deg);
+        transform: skewY(120deg);
+        transform: scaleY(.9);
 }
 @media screen and (max-width: 900px) {
     .logo {
