@@ -30,6 +30,12 @@ body{
     width: 5.5rem;
 }
 
+.heading {
+    margin-left: 39rem;
+    width: 20rem;
+    height: 6.3rem;
+}
+
 header, footer {
     background-color: var(--theColor) ;
     grid-column: 1/ 4;
@@ -56,11 +62,11 @@ header, .menu-list , .flex-container {
 }
 
 .flex-container aside {
-    background-color: lightslategray;
+    /* background-color: lightslategray; */
     width: 20rem;
 }
 .galad {
-    width: 15rem;
+    width: 75%;
     height: 30rem;
 }
 
@@ -104,22 +110,26 @@ header, .menu-list , .flex-container {
 .back {
     /* background-color: darkcyan; */
     display: flex;
+    flex-direction: column;
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
 }
 .back h2 {
     font-size: 3em;
-    text-shadow: .2vw .2vw .3vw white;
+    text-shadow: .2vw .2vw .3vw rgba(231, 188, 188, 0.886);
 }
 .back p {
     font-size: 1.5rem;
     background-color: bisque;
     margin: 2em 0;
+    flex-direction: row;
 }
+/* FlipCard */
 .container:hover .front {
     transform: rotateX(180deg);
 }
+/* Animation */
 .galad:hover {
         transform: rotateY(20deg);
         transform: rotateX(20deg);
@@ -144,5 +154,19 @@ header, .menu-list , .flex-container {
         margin-left: 0;
         min-height: 50vh;
         margin-top: auto;
+    }
+    .flex-container aside {
+        background-color: lightslategray;
+        width: 20%;
+    }
+    /* Image Responsiveness */
+    .galad {
+        width: 15rem;
+        height: 30rem;
+    }
+    /* Paragraph Responsive */
+    .back p {
+        flex-direction: column;
+        margin: auto;
     }
 }
