@@ -46,6 +46,7 @@ header, .menu-list , .flex-container {
 }
 .menu-list {
     list-style: none; 
+    /* text-decoration: none; */
     gap: 10px;
 }
 .menu {
@@ -88,6 +89,30 @@ header, .menu-list , .flex-container {
 .elven {
     width: 80%;
 }
+.mage {
+    width: 80rem;
+    height: 10rem;
+    display: flex;
+    margin-left: 35rem;
+}
+/* Animation+ */
+.mage {
+    transition: all 1s;
+}
+.mage:hover {
+    /* transform: rotate(390deg) scale(.5); */
+    /* translate(x, y) */
+    /* transform: perspective(900px) translate(17px, 0); */
+    /* transform: scale(0.4) rotate(300deg); */
+    animation: magicCircleAnimation 1s ease-in-out infinite;
+}
+/* .sage {
+    width: 80rem;
+    height: 10rem;
+    display: flex;
+    margin-right: rem;
+} */
+
 /* .front and .back */
 .front, .back {
     position: absolute;
@@ -135,6 +160,23 @@ header, .menu-list , .flex-container {
         transform: rotateX(20deg);
         transform: skewY(120deg);
         transform: scaleY(.9);
+}
+@keyframes magicCircleAnimation {
+    0%{
+        /* background-color: lightsteelblue; */
+        transform: translateX(10);
+    }
+    30%{
+        transform: scale(0.4);
+    }
+    50% {
+        transform: rotate(300deg);
+    }
+    100%{
+        transform: translateX(50);
+    }
+}
+    
 }
 @media screen and (max-width: 900px) {
     .logo {
